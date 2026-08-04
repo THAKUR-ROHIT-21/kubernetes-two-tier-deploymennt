@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  /* electronics-store palette: graphite-navy base, electric teal accent */
+  --color-graphite: #0B0E14;
+  --color-surface: #13171F;
+  --color-surface-hover: #1B212C;
+  --color-teal: #00D9C0;
+  --color-teal-dim: #00A896;
+  --color-amber: #FF6B35;
+  --color-text-primary: #F0F2F5;
+  --color-text-muted: #6B7280;
+  --color-border-line: #232936;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  background-color: var(--color-graphite);
+  font-family: var(--font-body);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}

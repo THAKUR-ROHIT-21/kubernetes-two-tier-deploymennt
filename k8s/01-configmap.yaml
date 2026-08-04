@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ecommerce-config
+  namespace: ecommerce
+
+data:
+  DB_HOST: "database-1.cq9q60ucuiq4.us-east-1.rds.amazonaws.com"
+  DB_PORT: "3306"
+  DB_NAME: "ecommerce_db"
+  DB_USER: "admin"
+
+  NODE_ENV: "production"
+
+  CLIENT_URL: "http://34.202.192.95:30081"
+
+  PORT: "5000"
