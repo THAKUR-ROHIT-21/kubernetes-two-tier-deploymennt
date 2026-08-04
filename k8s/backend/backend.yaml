@@ -88,6 +88,7 @@ spec:
           ports:
             - name: http
               containerPort: 5000
+              protocol: TCP
 
           envFrom:
             - configMapRef:
@@ -98,21 +99,21 @@ spec:
 
           readinessProbe:
             httpGet:
-              path: /api/health
+              path: /
               port: 5000
-            initialDelaySeconds: 15
+            initialDelaySeconds: 20
             periodSeconds: 10
             timeoutSeconds: 5
             failureThreshold: 6
 
           livenessProbe:
             httpGet:
-              path: /api/health
+              path: /
               port: 5000
-            initialDelaySeconds: 40
+            initialDelaySeconds: 60
             periodSeconds: 20
             timeoutSeconds: 5
-            failureThreshold: 3
+            failureThreshold: 5
 
           resources:
             requests:
